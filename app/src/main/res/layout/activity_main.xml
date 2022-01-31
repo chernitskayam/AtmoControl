@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/fun"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:icon="@drawable/ic_baseline_ac_unit_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
+
+    <TextView
+        android:id="@+id/textHeater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Обогреватель"
+        android:textSize="7pt"
+        app:layout_constraintEnd_toStartOf="@+id/textFun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/heater" />
+
+    <TextView
+        android:id="@+id/textFun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Вентилятор"
+        android:textSize="7pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fun" />
+
+    <Button
+        android:id="@+id/heater"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:icon="@drawable/ic_baseline_wb_sunny_24"
+        app:layout_constraintEnd_toStartOf="@+id/fun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
+
+    <TextView
+        android:id="@+id/texthumidifier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Увлажнитель"
+        android:textSize="7pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textFun"
+        app:layout_constraintTop_toBottomOf="@+id/humidifier" />
+
+    <Button
+        android:id="@+id/humidifier"
+        android:layout_width="55dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        app:icon="@drawable/ic_baseline_grain_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fun"
+        app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
+
+    <TextView
+        android:id="@+id/operationOfIndicators"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Работа индикаторов"
+        android:textSize="10pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/updateButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideButton" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:onClick="update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_popup_sync" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/guideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_question_mark_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="82dp"
+        android:layout_height="77dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="102dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_thermometer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
