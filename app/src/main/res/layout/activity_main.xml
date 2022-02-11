@@ -110,7 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Работа индикаторов"
-        android:textSize="10pt"
+        android:textSize="12pt"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/updateButton"
         app:layout_constraintEnd_toEndOf="parent"
