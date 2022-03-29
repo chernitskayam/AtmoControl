@@ -12,6 +12,9 @@
     <color name="SeaGreen">#2E8B57</color>
     <color name="Inactive">#abd3b5</color>
     <color name="InactiveBlack">#49705D</color>
-    <color name="main_blue">#0092CC</color>
+    <color name="more_blue">#4C87CF</color>
+    <color name="bar_blue">#3B82D9</color>
+    <color name="night_bar_blue">#4A82C7</color>
+    <color name="less_blue">#4599FF</color>
 
 </resources>

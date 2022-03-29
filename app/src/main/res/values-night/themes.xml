@@ -2,12 +2,12 @@
     <!-- Base application theme. -->
     <style name="Theme.AtmoControl" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/main_blue</item> //InactiveBlack
-        <item name="colorPrimaryVariant">@color/main_blue</item> //SeaGreen
+        <item name="colorPrimary">@color/more_blue</item> //InactiveBlack
+        <item name="colorPrimaryVariant">@color/night_bar_blue</item> //SeaGreen
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/main_blue</item> //MediumSeaGreen
-        <item name="colorSecondaryVariant">@color/main_blue</item> //SeaGreen
+        <item name="colorSecondary">@color/more_blue</item> //MediumSeaGreen
+        <item name="colorSecondaryVariant">@color/more_blue</item> //SeaGreen
         <item name="colorOnSecondary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
