@@ -12,4 +12,5 @@
     <color name="SeaGreen">#2E8B57</color>
     <color name="Inactive">#abd3b5</color>
     <color name="InactiveBlack">#49705D</color>
+    <color name="blue_var_bar">#0092CC</color>
 </resources>
