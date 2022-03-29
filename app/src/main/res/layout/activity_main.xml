@@ -44,9 +44,12 @@
 
     <Button
         android:id="@+id/fun"
-        android:layout_width="55dp"
-        android:layout_height="60dp"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
         android:layout_marginTop="20dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="30dp"
         app:icon="@drawable/ic_baseline_ac_unit_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -76,9 +79,13 @@
 
     <Button
         android:id="@+id/heater"
-        android:layout_width="55dp"
-        android:layout_height="60dp"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
         android:layout_marginTop="20dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="30dp"
+        app:flow_horizontalAlign="center"
         app:icon="@drawable/ic_baseline_wb_sunny_24"
         app:layout_constraintEnd_toStartOf="@+id/fun"
         app:layout_constraintStart_toStartOf="parent"
@@ -97,9 +104,12 @@
 
     <Button
         android:id="@+id/humidifier"
-        android:layout_width="55dp"
-        android:layout_height="60dp"
+        android:layout_width="57dp"
+        android:layout_height="57dp"
         android:layout_marginTop="20dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="30dp"
         app:icon="@drawable/ic_baseline_grain_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fun"
@@ -148,7 +158,7 @@
         app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/humImg"
-        app:srcCompat="@drawable/ic_thermometer" />
+        app:srcCompat="@drawable/ic_thermometer_blue" />
 
     <ImageView
         android:id="@+id/humImg"
@@ -159,6 +169,6 @@
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideButton"
-        app:srcCompat="@drawable/ic_hum_blue" />
+        app:srcCompat="@drawable/ic_humidity_blue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

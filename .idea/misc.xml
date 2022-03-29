@@ -7,12 +7,12 @@
         <entry key="..\:/FinalQualifyingWork/AtmoControl/app/src/main/res/drawable/ic_baseline_grain_24.xml" value="0.3880208333333333" />
         <entry key="..\:/FinalQualifyingWork/AtmoControl/app/src/main/res/drawable/ic_baseline_wb_sunny_24.xml" value="0.3880208333333333" />
         <entry key="..\:/FinalQualifyingWork/AtmoControl/app/src/main/res/drawable/ic_hum_blue.xml" value="0.2555" />
+        <entry key="..\:/FinalQualifyingWork/AtmoControl/app/src/main/res/drawable/rounding.xml" value="0.241" />
         <entry key="..\:/FinalQualifyingWork/AtmoControl/app/src/main/res/layout/activity_main.xml" value="0.264" />
-        <entry key="..\:/Users/Student/Desktop/AtmoControl1/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
