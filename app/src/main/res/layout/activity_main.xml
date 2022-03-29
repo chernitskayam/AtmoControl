@@ -159,6 +159,6 @@
         app:layout_constraintHorizontal_bias="0.75"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guideButton"
-        app:srcCompat="@drawable/ic_humidity" />
+        app:srcCompat="@drawable/ic_hum_blue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
