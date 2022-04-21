@@ -50,32 +50,11 @@
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:cornerRadius="30dp"
+        android:onClick="anim_wind"
         app:icon="@drawable/ic_baseline_ac_unit_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
-
-    <TextView
-        android:id="@+id/textHeater"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Обогреватель"
-        android:textSize="7pt"
-        app:layout_constraintEnd_toStartOf="@+id/textFun"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/heater" />
-
-    <TextView
-        android:id="@+id/textFun"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Вентилятор"
-        android:textSize="7pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fun" />
 
     <Button
         android:id="@+id/heater"
@@ -85,22 +64,12 @@
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:cornerRadius="30dp"
+        android:onClick="anim_fire"
         app:flow_horizontalAlign="center"
         app:icon="@drawable/ic_baseline_wb_sunny_24"
         app:layout_constraintEnd_toStartOf="@+id/fun"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
-
-    <TextView
-        android:id="@+id/texthumidifier"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Увлажнитель"
-        android:textSize="7pt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textFun"
-        app:layout_constraintTop_toBottomOf="@+id/humidifier" />
 
     <Button
         android:id="@+id/humidifier"
@@ -110,6 +79,7 @@
         android:insetTop="0dp"
         android:insetBottom="0dp"
         app:cornerRadius="30dp"
+        android:onClick="anim_rain"
         app:icon="@drawable/ic_baseline_grain_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/fun"
@@ -136,6 +106,7 @@
         android:onClick="update"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@android:drawable/ic_popup_sync" />
 

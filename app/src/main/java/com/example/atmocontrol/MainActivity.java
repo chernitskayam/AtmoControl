@@ -3,7 +3,11 @@ package com.example.atmocontrol;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -46,31 +50,31 @@ public class MainActivity extends AppCompatActivity {
         TextView tempJSON = findViewById(R.id.tempValue);
         TextView humJSON = findViewById(R.id.humValue);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>(){
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject object = new JSONObject(response);
-                            JSONArray jsonArray = object.getJSONArray("data");
-                            ArrayList<JSONObject> listItems = getArrayListFromJSONArray(jsonArray);
-                            try{
-                                tempJSON.setText(listItems.get(0).getString("temp"));
-                                humJSON.setText(listItems.get(0).getString("humidity"));
-                                progressBar.setVisibility(View.INVISIBLE);
-                            }catch (JSONException je){
-                                je.printStackTrace();
-                            }
-                        }catch (JSONException e){
-                            e.printStackTrace();
+            new Response.Listener<String>(){
+                @Override
+                public void onResponse(String response) {
+                    try {
+                        JSONObject object = new JSONObject(response);
+                        JSONArray jsonArray = object.getJSONArray("data");
+                        ArrayList<JSONObject> listItems = getArrayListFromJSONArray(jsonArray);
+                        try{
+                            tempJSON.setText(listItems.get(0).getString("temp"));
+                            humJSON.setText(listItems.get(0).getString("humidity"));
+                            progressBar.setVisibility(View.INVISIBLE);
+                        }catch (JSONException je){
+                            je.printStackTrace();
                         }
+                    }catch (JSONException e){
+                        e.printStackTrace();
                     }
-                },
-                new Response.ErrorListener(){
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
-                    }
-                });
+                }
+            },
+            new Response.ErrorListener(){
+                @Override
+                public void onErrorResponse(VolleyError error) {
+                    Toast.makeText(getApplicationContext(),error.getMessage(),Toast.LENGTH_SHORT).show();
+                }
+            });
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
@@ -87,5 +91,32 @@ public class MainActivity extends AppCompatActivity {
             js.printStackTrace();
         }
         return aList;
+    }
+
+    public void anim_fire (View v)
+    {
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "\uD83D\uDD25",
+                Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.NO_GRAVITY, -307, 310);
+        toast.show();
+    }
+
+    public void anim_wind (View v)
+    {
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "\uD83C\uDF2C",
+                Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.NO_GRAVITY, 0, 310);
+        toast.show();
+    }
+
+    public void anim_rain (View v)
+    {
+        Toast toast = Toast.makeText(getApplicationContext(),
+                "\uD83C\uDF27",
+                Toast.LENGTH_SHORT);
+        toast.setGravity(Gravity.NO_GRAVITY, 307, 310);
+        toast.show();
     }
 }
