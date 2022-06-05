@@ -93,30 +93,4 @@ public class MainActivity extends AppCompatActivity {
         return aList;
     }
 
-    public void anim_fire (View v)
-    {
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "\uD83D\uDD25",
-                Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.NO_GRAVITY, -307, 310);
-        toast.show();
-    }
-
-    public void anim_wind (View v)
-    {
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "\uD83C\uDF2C",
-                Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.NO_GRAVITY, 0, 310);
-        toast.show();
-    }
-
-    public void anim_rain (View v)
-    {
-        Toast toast = Toast.makeText(getApplicationContext(),
-                "\uD83C\uDF27",
-                Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.NO_GRAVITY, 307, 310);
-        toast.show();
-    }
 }

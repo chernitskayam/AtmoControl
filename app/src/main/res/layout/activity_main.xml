@@ -3,8 +3,33 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/guideButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_question_mark_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="244dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:onClick="update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_popup_sync" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -16,130 +41,156 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/humValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="0"
-        android:textSize="14pt"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.71"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/humImg" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tempValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="0"
-        android:textSize="14pt"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tempImg" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/fun"
-        android:layout_width="57dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        app:cornerRadius="30dp"
-        android:onClick="anim_wind"
-        app:icon="@drawable/ic_baseline_ac_unit_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-104dp"
+                tools:layout_editor_absoluteY="-156dp">
 
-    <Button
-        android:id="@+id/heater"
-        android:layout_width="57dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        app:cornerRadius="30dp"
-        android:onClick="anim_fire"
-        app:flow_horizontalAlign="center"
-        app:icon="@drawable/ic_baseline_wb_sunny_24"
-        app:layout_constraintEnd_toStartOf="@+id/fun"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="90dp"
+                    android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/humidifier"
-        android:layout_width="57dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20dp"
-        android:insetTop="0dp"
-        android:insetBottom="0dp"
-        app:cornerRadius="30dp"
-        android:onClick="anim_rain"
-        app:icon="@drawable/ic_baseline_grain_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/fun"
-        app:layout_constraintTop_toBottomOf="@+id/operationOfIndicators" />
+                    <ImageView
+                        android:id="@+id/tempImg"
+                        android:layout_width="82dp"
+                        android:layout_height="77dp"
+                        android:layout_marginLeft="82dp"
+                        app:srcCompat="@drawable/ic_thermometer_blue" />
 
-    <TextView
-        android:id="@+id/operationOfIndicators"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Работа индикаторов"
-        android:textSize="12pt"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/updateButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideButton" />
+                    <ImageView
+                        android:id="@+id/humImg"
+                        android:layout_width="82dp"
+                        android:layout_height="77dp"
+                        android:layout_marginLeft="82dp"
+                        app:srcCompat="@drawable/ic_humidity_blue" />
+                </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/updateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:clickable="true"
-        android:onClick="update"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_popup_sync" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/guideButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:clickable="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_question_mark_24" />
+                    <TextView
+                        android:id="@+id/tempValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="113dp"
+                        android:text="0"
+                        android:textSize="14pt"
+                        android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/tempImg"
-        android:layout_width="82dp"
-        android:layout_height="77dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/humImg"
-        app:srcCompat="@drawable/ic_thermometer_blue" />
+                    <TextView
+                        android:id="@+id/humValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="142dp"
+                        android:text="0"
+                        android:textSize="14pt"
+                        android:textStyle="bold" />
+                </LinearLayout>
 
-    <ImageView
-        android:id="@+id/humImg"
-        android:layout_width="82dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/guideButton"
-        app:srcCompat="@drawable/ic_humidity_blue" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <GridView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="2"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/operationOfIndicators"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Работа индикаторов"
+                    android:textColor="@color/night_bar_blue"
+                    android:textAlignment="center"
+                    android:textSize="12pt"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/heater"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:layout_marginLeft="58dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="anim_fire"
+                        app:cornerRadius="30dp"
+                        app:flow_horizontalAlign="center"
+                        app:icon="@drawable/ic_baseline_wb_sunny_24" />
+
+                    <Button
+                        android:id="@+id/humidifier"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="anim_rain"
+                        app:cornerRadius="30dp"
+                        android:layout_marginLeft="58dp"
+                        app:icon="@drawable/ic_baseline_grain_24" />
+
+                    <Button
+                        android:id="@+id/fun"
+                        android:layout_width="57dp"
+                        android:layout_height="57dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:onClick="anim_wind"
+                        app:cornerRadius="30dp"
+                        android:layout_marginLeft="58dp"
+                        app:icon="@drawable/ic_baseline_ac_unit_24" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/manualSetup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:text="Установить вручную"
+                    android:textColor="@color/night_bar_blue"
+                    android:textAlignment="center"
+                    android:textSize="12pt"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
