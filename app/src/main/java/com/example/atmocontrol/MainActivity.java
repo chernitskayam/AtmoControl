@@ -93,4 +93,9 @@ public class MainActivity extends AppCompatActivity {
         return aList;
     }
 
+    public void send_params (View v)
+    {
+        Toast.makeText(getApplicationContext(),"Некорректно введены данные", Toast.LENGTH_SHORT).show();
+    }
+
 }

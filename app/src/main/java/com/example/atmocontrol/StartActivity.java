@@ -31,9 +31,7 @@ public class StartActivity extends AppCompatActivity {
         {
             @Override
             public void onTick (long l)
-            {
-
-            }
+            {}
             public void onFinish()
             {
                 String url = "http://api.blueberry.gq/check_conn.php";
@@ -41,6 +39,8 @@ public class StartActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Toast.makeText(StartActivity.this,response,Toast.LENGTH_LONG).show();
+                        Intent intent = new Intent(StartActivity.this, LoginActivity.class);
+                        startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -57,8 +57,7 @@ public class StartActivity extends AppCompatActivity {
                 };
                 RequestQueue requestQueue = Volley.newRequestQueue(StartActivity.this);
                 requestQueue.add(stringRequest);
-                Intent intent = new Intent(StartActivity.this, LoginActivity.class);
-                startActivity(intent);
+
             }
         }.start();
     }
